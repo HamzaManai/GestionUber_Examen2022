@@ -1,0 +1,68 @@
+﻿@model IEnumerable<App.ApplicationCore.Domain.Course>
+
+@{
+    ViewData["Title"] = "Liste des courses";
+}
+
+<h1>Liste des courses</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LieuDepart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LieuArrive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Montant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaiementEnLigne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoitureId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LieuDepart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LieuArrive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Montant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaiementEnLigne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoitureId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientId)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
